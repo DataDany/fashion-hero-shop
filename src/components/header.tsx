@@ -7,6 +7,7 @@ import { SearchIcon, UserIcon, CartIcon, MenuIcon, CloseIcon, HeartIcon } from "
 import { SearchModal } from "./search-modal";
 import { MegaMenuNav, MobileMegaMenuContent } from "./mega-menu";
 import { useAuth } from "./auth-provider";
+import { RecentlyViewedDropdown } from "./recently-viewed-dropdown";
 
 const secondaryLinks = [
   { label: "About", href: "/about" },
@@ -63,6 +64,7 @@ export function Header({ onCartOpen, cartCount = 0, wishlistCount = 0 }: HeaderP
           >
             <SearchIcon />
           </button>
+          <RecentlyViewedDropdown />
           <Link
             href="/wishlist"
             aria-label="Wishlist"

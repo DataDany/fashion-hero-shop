@@ -260,6 +260,24 @@ export function HeartFilledIcon({ className }: IconProps) {
   );
 }
 
+export function HistoryIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={cn("h-5 w-5", className)}
+    >
+      <polyline points="1 4 1 10 7 10" />
+      <path d="M3.51 15a9 9 0 1 0 .49-4.95" />
+      <polyline points="12 7 12 12 15 14" />
+    </svg>
+  );
+}
+
 export function ChevronDownIcon({ className }: IconProps) {
   return (
     <svg
