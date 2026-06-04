@@ -32,3 +32,13 @@ Educational template for Wojtek's AI Product Heroes workshops. Students get a pr
 - Generic "FashionHero" branding instead of Allbirds
 - Stock shoe images from Unsplash instead of Allbirds product photos
 - Hardcoded product data that students can swap to a real API
+
+## Custom Features Added
+
+### Recently Viewed History Dropdown (navbar)
+Added a clock icon button in the header (between search and wishlist) that opens a dropdown panel showing products the user has previously visited. Key details:
+- Reads from `localStorage` key `stepforward-recently-viewed` — the same store the on-page recently-viewed carousel already writes to, so visiting a product page automatically populates the dropdown
+- Shows up to 8 items: product thumbnail, name, and price in PLN
+- Badge on the icon shows the current count of viewed items
+- Click outside or navigate to a product to close the dropdown
+- Files changed: `src/components/icons.tsx` (added `HistoryIcon`), `src/components/recently-viewed-dropdown.tsx` (new component), `src/components/header.tsx` (wired in)
